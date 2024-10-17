@@ -55,7 +55,7 @@ public class Program
                 Provider = key_storage_provider
             };//Note That The Above Parameters Prevent Keys Being Exported From The KSP By Default.
 
-            CngKey.Create(new CngAlgorithm("AES-256"), crypto_key_name, key_creation_parameters);
+            CngKey.Create(new CngAlgorithm("AES"), crypto_key_name, key_creation_parameters);//When Used On .NET Framework (Outdated), Key Size May Need To Be Specified, e.g. AES-256.
         }
 
         /*
